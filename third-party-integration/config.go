@@ -5,7 +5,7 @@ import (
 	"os"
 )
 
-var API_KEY = os.Getenv("NEWS_APIKEY")
+var ApiKey = os.Getenv("NEWS_APIKEY")
 
 const BASE_URL_V2 = "https://newsapi.org/v2"
 const TOP_HEADLINES_URL = BASE_URL_V2 + "/top-headlines"
@@ -20,5 +20,5 @@ func everythingURL() string {
 }
 
 func url(path string) string {
-	return fmt.Sprintf("%s?apiKey=%s", path, API_KEY)
+	return fmt.Sprintf("%s?apiKey=%s", path, ApiKey)
 }
