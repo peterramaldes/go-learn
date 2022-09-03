@@ -7,7 +7,30 @@ import (
 )
 
 func main() {
+	// Just add the method you want to test here.
+}
 
+func sumAndSubtractTime() {
+	toAdd := 1 * time.Hour
+	fmt.Println("1:", toAdd)
+
+	toAdd += 1 * time.Minute
+	fmt.Println("2:", toAdd)
+
+	toAdd += 1 * time.Second
+	fmt.Println("3:", toAdd)
+
+	toAdd -= 1*time.Minute + 1*time.Second
+	fmt.Println("4:", toAdd)
+
+	d1 := time.Date(2021, 8, 15, 14, 30, 45, 100, time.UTC)
+	fmt.Println("The time is", d1)
+
+	add := 24 * time.Hour
+	fmt.Println("Adding", add)
+
+	nd1 := d1.Add(add)
+	fmt.Println("The new time is", nd1)
 }
 
 func compareDates() {
